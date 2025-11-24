@@ -1,24 +1,26 @@
 <div class="auth-form-container">
   <div id="auth-form">
-    <div>
-      <label for="email">Email :</label>
+    <div class="input-group">
       <input
+        class="input"
         type="email"
         id="email"
         name="email"
         [(ngModel)]="email"
         required
       />
+      <label for="email" class="user-label">Email</label>
     </div>
-    <div>
-      <label for="password">Mot de passe :</label>
+    <div class="input-group">
       <input
+        class="input"
         type="password"
         id="password"
         name="password"
         [(ngModel)]="password"
         required
       />
+      <label for="password" class="user-label">Mot de passe</label>
     </div>
     <button type="submit" [disabled]="(email == '' && password == '')" (click)="onSubmit()">Se connecter</button>
   </div>

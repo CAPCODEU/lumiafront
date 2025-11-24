@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.item:nth-child(1) {
+  width: 15%;
+  height: auto;
+}
+
+.item:nth-child(2) {
+  width: 85%;
+  height: auto;
+}
