@@ -1,26 +1,18 @@
-import {Component, inject} from '@angular/core';
+import {Component} from '@angular/core';
 import {FormsModule} from "@angular/forms";
-import {ChatService} from "./chat.service";
-import {firstValueFrom} from "rxjs";
-import {JsonPipe} from "@angular/common";
+import {HistorySidebarComponent} from './history-sidebar/history-sidebar.component';
+import {ConversationFeedComponent} from './conversation-feed/conversation-feed.component';
 
 @Component({
     selector: 'app-chat',
-    imports: [
-        FormsModule,
-        JsonPipe
-    ],
+  imports: [
+    FormsModule,
+    HistorySidebarComponent,
+    ConversationFeedComponent,
+  ],
     templateUrl: './chat.component.html',
     styleUrl: './chat.component.scss'
 })
 export class ChatComponent {
-    message?: string;
-    response?: any;
-    service = inject(ChatService);
 
-    async sendMessage() {
-        this.response = await firstValueFrom(this.service.send({
-            message: this.message
-        }));
-    }
 }

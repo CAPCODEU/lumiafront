@@ -1,0 +1,7 @@
+<div class="chat-topbar-container">
+  <select>
+    @for (model of modelList; track model.id) {
+      <option [value]="model.id">{{model.name}}</option>
+    }
+  </select>
+</div>

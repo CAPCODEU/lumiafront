@@ -1,6 +1,8 @@
-<input type="text" [(ngModel)]="message">
-<button (click)="sendMessage()">Send</button>
-
-<div>
-    {{  response | json }}
+<div class="container">
+  <div class="item">
+    <app-history-sidebar></app-history-sidebar>
+  </div>
+  <div class="item">
+    <app-conversation-feed></app-conversation-feed>
+  </div>
 </div>

@@ -1,19 +1,23 @@
 /* global variables */
 
-$primary-color: #1976d2;
-$primary-color-gradient: rgba(25, 118, 210, 0.73);
-$secondary-color-gradient: #AAAAAAA8;
-$secondary-color: #424242;
-$background-color: #f5f5f5;
-$border-color: #ddd;
-$text-color: #333;
-$button-color: #983eff;
-$button-hover-color: #390b71;
+$primary-color: #5744EE;
+$bg-primary: #18181A;
+$bg-secondary: #232227;
+$border: #3C3A49;
+$border-discreet: #1E1D24;
+$bg-discreet: #0C0C0E;
+$text-medium: #AEACB7;
+$icons: #828189;
+$text: #FFFFFF;
 
 $error-color: #e74c3c;
 $success-color: #2ecc71;
 $warning-color: #f39c12;
 $info-color: #3498db;
 
-$table-font-size: 1rem;
-$main-font-family: 'Segoe UI', Arial, sans-serif;
+$title-size: 2.5rem;
+
+$main-font-family: 'Plus Jakarta Sans', sans-serif;
+$title-font-family: 'Sen', sans-serif;
+
+$border-radius: 20px;

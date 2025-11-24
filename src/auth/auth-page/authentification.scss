@@ -1,11 +1,59 @@
 @use '../../globalVariables' as *;
 
+.auth-page-container {
+  display: flex;
+  background-image: linear-gradient(to right top, #1b1a23, #1e1d29, #22202f, #252436, #29273c, #2e2c45, #34304e, #393557, #413d65, #4a4572, #534e81, #5c568f);
+  height: 100%;
+  border-radius: $border-radius;
+  justify-content: center;
+  align-items: center;
+
+
+  .auth-item:nth-child(1),
+  .auth-item:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: auto;
+  }
+
+  #logo-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+
+    svg {
+      margin-right: 24px;
+    }
+
+    #app-title {
+      font-family: $title-font-family;
+      color: $text;
+      font-size: 3rem;
+      font-weight: 800;
+      text-align: center;
+    }
+  }
+}
+
+
+#connexion-label {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: $text;
+}
+
 .toggle-switch-container {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-top: 15px;
-  background-color: $secondary-color-gradient;
 }
 
 .switch {
@@ -28,7 +76,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #983eff;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -40,7 +87,6 @@
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }

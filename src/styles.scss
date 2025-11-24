@@ -1,1 +1,27 @@
 @use 'globalVariables' as *;
+
+/* Global Styles */
+
+
+
+html {
+  background-color: $bg-discreet;
+  color: $text-medium;
+  font-family: $main-font-family;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.logo-fill {
+  fill: $primary-color;
+}
+
+.error-message {}
+
+.success-message {}
+
+.warning-message {}
+
+.info-message {}
+
