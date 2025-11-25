@@ -3,10 +3,10 @@
     <app-chat-topbar></app-chat-topbar>
   </div>
   <div class="chat-section">
-    <app-chat-display></app-chat-display>
+    <app-chat-display [response]="response" [prompt]="prompt" ></app-chat-display>
   </div>
   <div class="chat-section">
-    <app-chat-prompt></app-chat-prompt>
+    <app-chat-prompt (response)="getResponse($event)" (prompt)="getPrompt($event)" ></app-chat-prompt>
   </div>
 </div>
 

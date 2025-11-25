@@ -1,8 +1,17 @@
-<div id="chat-prompt-container">
-  <input type="text" [(ngModel)]="message">
-  <button (click)="sendMessage()">Send</button>
 
-  <div>
-    {{  response | json }}
+  <div id="chat-prompt-container">
+    <button id="attach-file-button" (click)="attachFile()">
+      <lucide-icon [name]="PaperclipIcon" size="24"></lucide-icon>
+    </button>
+    <input
+      id="prompt-input"
+      type="text"
+      [(ngModel)]="message"
+      (keydown.enter)="sendMessage()"
+      placeholder="Ecrivez votre message..."
+    />
+    <button id="submit-prompt-button" (click)="sendMessage()">
+      <lucide-icon [name]="SendIcon" size="24"></lucide-icon>
+    </button>
   </div>
-</div>
+

@@ -1,0 +1,68 @@
+@use '../../../../../globalVariables' as *;
+
+.chat-topbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1.5px solid #9591B619;
+
+  .topbar-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .topbar-item:nth-child(1) {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+    .model-select {
+
+      .model-option {
+
+      }
+    }
+
+    .agent-info {
+
+      agent-name {
+
+      }
+    }
+  }
+
+  .topbar-item:nth-child(2) {
+    flex: 2;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+
+    svg {
+      margin-right: 24px;
+    }
+
+    #app-title {
+      font-family: $title-font-family;
+      color: $text;
+      font-weight: 800;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  .topbar-item:nth-child(3) {
+    flex: 1;
+    justify-content: flex-end;
+
+    .profile-button {
+
+    }
+  }
+
+}

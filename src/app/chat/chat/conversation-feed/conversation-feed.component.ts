@@ -17,4 +17,14 @@ import {ChatPromptComponent} from './chat-prompt/chat-prompt.component';
 })
 export class ConversationFeedComponent {
 
+  prompt: string = '';
+  response: any = null;
+
+  getPrompt(p: string) {
+    this.prompt = p;
+  }
+
+  getResponse(res: any) {
+    this.response = res;
+  }
 }

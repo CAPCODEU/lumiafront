@@ -2,6 +2,8 @@
 @use 'sass:color';
 
 #history-sidebar-container {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 
   #logo-section {
     display: flex;
@@ -99,12 +101,37 @@
         border: none;
         cursor: pointer;
         font-size: 1.2rem;
+        align-items: center;
+        display: flex;
+        justify-content: center;
 
         .option-icon {
           color: $icons;
           width: 1.2rem;
           height: 1.2rem;
+          padding: 0.5rem;
         }
+
+        &:hover .option-icon {
+          border: $border solid 1px;
+          color: color.adjust($icons, $lightness: -20%);
+        }
+      }
+    }
+
+    #history-list {
+      list-style: none;
+      .history-item {
+        display: flex;
+        justify-content: center;
+        padding: 1rem 1rem;
+        border-radius: $border-radius;
+        .conversation-title {}
+      }
+
+      .history-item:hover {
+        background-color: $border-discreet;
+        cursor: pointer;
       }
     }
 

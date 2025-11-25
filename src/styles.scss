@@ -20,6 +20,12 @@ body {
   fill: $primary-color-dark;
 }
 
+.logo-no-fill {
+  border: $primary-color-dark 3px solid;
+  border-radius: 80px;
+  fill: none;
+}
+
 .error-message {}
 
 .success-message {}

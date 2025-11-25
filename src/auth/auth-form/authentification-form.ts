@@ -33,7 +33,7 @@ export class AuthentificationForm {
     onSubmit(): void {
         this.authService.postLogin(this.email, this.password).subscribe({
             next: (response: any) => {
-                console.log('Login successful:');
+                console.log('Login successful: ', response);
                 this.authToken = response.token;
                 this.isAuthenticated = true;
                 localStorage.setItem('authStatus', 'true');

@@ -1,0 +1,56 @@
+@use '../../../../../globalVariables' as *;
+@use 'sass:color';
+
+  #chat-prompt-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+
+    #attach-file-button {
+      border: 1px solid transparent;
+      background-color: transparent;
+      color: $text;
+      padding: 10px 16px;
+      border-radius: $border-radius;
+      cursor: pointer;
+      transition: color 0.2s;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.02);
+        color: color.adjust($text, $lightness: -10%);
+      }
+    }
+
+    #prompt-input {
+      padding: 20px;
+      font-family: $main-font-family;
+      font-size: $font-size-base;
+      border-radius: $border-radius;
+      background-color: $bg-secondary;
+      color: $text;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      outline: none;
+      border: 1px solid $primary-color-dark;
+      box-shadow: 0 0 24px 0 $box-shadow-color;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    #submit-prompt-button {
+      border: 1px solid transparent;
+      background: $primary-color-dark;
+      color: $text;
+      padding: 10px 16px;
+      border-radius: $border-radius;
+      cursor: pointer;
+      transition: border-color 0.2s, background-color 0.2s;
+
+      &:hover {
+        border-color: $primary-color-light;
+        background-color: rgba(255, 255, 255, 0.02);
+      }
+    }
+  }
+
