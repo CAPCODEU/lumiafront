@@ -12,4 +12,8 @@ export class ChatPromptService {
   send(param: { message?: string }) {
     return this.http.post<any>(`${environment.apiUrl}/chat`, param );
   }
+
+  uploadFiles(formData: FormData) {
+    return this.http.post<any>(`${environment.apiUrl}/chat/upload`, formData);
+  }
 }

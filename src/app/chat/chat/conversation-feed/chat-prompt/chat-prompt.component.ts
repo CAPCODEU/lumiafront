@@ -34,8 +34,12 @@ export class ChatPromptComponent {
     console.log('Sending message:', this.message);
   }
 
-  attachFile() {
-    console.log('Attach file clicked');
+  attachFile(fileInput?: HTMLInputElement) {
+    fileInput?.click();
+  }
+
+  async onFileSelected(event: Event) {
 
   }
+
 }

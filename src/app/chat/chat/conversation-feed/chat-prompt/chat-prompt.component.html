@@ -3,6 +3,9 @@
     <button id="attach-file-button" (click)="attachFile()">
       <lucide-icon [name]="PaperclipIcon" size="24"></lucide-icon>
     </button>
+    <input type="file" #fileInput (change)="onFileSelected($event)" multiple style="display: none;" />
+
+
     <input
       id="prompt-input"
       type="text"
