@@ -1,31 +1,39 @@
 <div class="auth-form-container">
-  <div id="auth-form">
-    <div class="input-group">
-      <input
-        class="input"
-        type="email"
-        id="email"
-        name="email"
-        [(ngModel)]="email"
-        required
-      />
-      <label for="email" class="user-label">Email</label>
+  <h2 id="connexion-label">Connexion : </h2>
+  <div class="auth-form-fields">
+    <div id="auth-form">
+      <div class="input-group">
+        <input
+          class="input"
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="email"
+          required
+        />
+        <label for="email" class="user-label">Email</label>
+      </div>
+      <div class="input-group">
+        <input
+          class="input"
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          required
+        />
+        <label for="password" class="user-label">Mot de passe</label>
+      </div>
+      <button class="auth-form-submit" type="submit" [disabled]="(email == '' && password == '')" (click)="onSubmit()">Se connecter</button>
     </div>
-    <div class="input-group">
-      <input
-        class="input"
-        type="password"
-        id="password"
-        name="password"
-        [(ngModel)]="password"
-        required
-      />
-      <label for="password" class="user-label">Mot de passe</label>
+    <div *ngIf="errorMessage" class="error-message">
+      Error : {{ errorMessage }}, please try again.
     </div>
-    <button type="submit" [disabled]="(email == '' && password == '')" (click)="onSubmit()">Se connecter</button>
   </div>
-  <div *ngIf="errorMessage" class="error-message">
-    Error : {{ errorMessage }}, please try again.
+  <div class="auth-form-footer">
+    <p>© 2025 Lumia</p>
+    <p>Made by  <b>CAPCOD</b></p>
   </div>
 </div>
+
 
